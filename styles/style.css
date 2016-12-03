@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'radioland';
+  src: url('fonts/RADIOLAND.ttf')  format('truetype')       
+}
+
+@font-face {
+  font-family: 'radioland-slim';
+  src: url('fonts/RADIOLANDSLIM.ttf')  format('truetype')       
+}
+
+.app {
+	margin: 15px;
+	padding: 15px;
+	height: 100%;
+}
+
+.nav-link {
+	color: cornflowerblue;
+	margin: 12px;
+}
+form {
+	padding: 24px;
+}
+
+textarea {
+	height: 200px !important;
+}
+.players {
+	display: flex;
+}
+
+.players-1 .player {
+	width: 100%;
+	padding: 20px;
+}
+
+.players-2 .player {
+	width: 50%;
+	padding: 20px;
+}
+
+.main-clock{
+
+}
+.main-clock .main-clock-inner {
+	margin-left:auto;
+	margin-right: auto;
+	width: 200px;
+	font-size: 42px;
+}
+.main-clock .clock-inner {
+	font-size: 42px;
+}
+.player-lap-time .clock-inner{
+	text-align: center;
+	font-size: 22px;	
+}
+.player-total-time .clock-inner {
+	margin: 5px;
+	text-align: center;
+	font-size: 22px;	
+}
+.btn {
+  font-size: 24px;
+  margin: 15px 0px;
+  width:100%;
+}
+.laps {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.laps .lap{
+	display: flex;
+	justify-content: space-between;
+}
+
+.player-0 .lap-time, .player-0 .player-total-time {
+	color: coral;
+}
+.player-1 .lap-time, .player-1 .player-total-time {
+	color: cornflowerblue;
+}
+.laps .clock-inner {
+    font-size: 18px;
+}
+.laps .lap-time .clock-inner {
+    font-size: 24px;
+}
+.circle {
+	position:absolute;
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	top: 13px;
+}
+.btn-history{
+	position: relative;
+}
+.circle-red {
+	background-color: coral;
+	left: 40px;
+}
+.circle-blue {
+	background-color: cornflowerblue;
+	right:40px;
+}
+.no-races {
+    text-align: center
+}
+.btn-trash {
+    width: 65px;
+    right: 20px;
+    top: 0px;
+    position: absolute;
+}
+.digital {
+  font-family: 'radioland';
+}
+
+.digital-slim {
+  font-family: 'radioland-slim';
+}

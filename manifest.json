@@ -1,0 +1,16 @@
+{
+  "name": "Red vs Blue v4",
+  "icons": [
+    {
+      "src": "clock-icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "density": 4.0
+    }
+  ],
+  "theme_color": "#CC0000",
+  "background_color": "#0000BB",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "landscape"
+}

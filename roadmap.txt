@@ -1,0 +1,125 @@
+player names
+add more players
+workout descriptions
+single player....these 2 wold actually make this useful to me every day!
+boxing mode...basically this would auto lap and make a noise and needs to let you config when that occurs...also useful to me
+just allow config with similar to one i use..
+
+rounds
+round time
+rest time
+round warning also a must...
+setup time is nice
+
+so you can hit finish and we record the rounds completed
+...also kinda needs to work with multiplayer...
+although that makes no sense since yer both doin the same thing!
+so yeah single play is pre-requisite
+
+circuit mode/auto workout or is that the same thing?
+...it might be simpler UI to treat them separate
+
+so i config with:
+burpees x20
+squatsx20
+then i hit start
+then i want to hit lap after each exercise or after each circuit and i can config that
+
+
+so for both above modes i need a menu to pick what we are doing
+
+i think / route is menu1
+SINGLE PLAYER
+MULTI PLAYER
+
+
+
+multi player
+...previous setup is remembered
+
+default has 2 players..they have default names(player 1, player 2)
+there is an + button
+...player just gets named player 3 ---DONT DO THIS FEATURE...IM NEVER GOING TO USE IT
+
+there is a setting for start delay on this screen
+
+i think now we just hit start and it goes to the game view we got now
+
+
+
+single player
+
+goes to settings first
+which has a start delay setting
+and you can pick a workout(circuit mode)
+or you can pick boxing mode
+and you can hit play
+
+
+
+
+
+Feature:
+workout descriptions
+navigate from menu to new settings screen
+there is then a text area to fill in
+
+..buut that is shit!
+i need to write it at the gym???
+suppose it could be done before and left on that screen?
+ok this is still the way to go
+another feature makes it better
+
+
+Feature:
+workout templates
+these show on the pre-race settings screen as a list of buttons
+so you need to name the template and the names on the button
+and its got
+{
+	startupTime: 15,
+	description: 15
+}
+template screen also has a delete button and back button
+there is a button on teh / menu to get to templates
+
+
+
+================================================CHECKPOINT=====================================
+ALL ABOVE IS DONE EXCEPT FOR BOXING MODE
+and templates/settings dont look too pretty
+
+Feature:
+post workout comments
+basically a textarea on history view
+... this is the last feature to make this app usable to me everyday instad of timer+memo
+
+
+Feature:
+Running mode
+
+WHEN I pick Running mode from the menu
+ThEN On the setting screen
+AND I always need to pick a speed
+OR I can pick a distance
+OR I can pick a time
+THEN it should show me the distance i will cover if i picked a time
+OR it should show me the time I will go for if I picked a distance
+
+
+THEN the play screen then shows
+Time elapsed - does already
+Time Remaining
+Distance covered based on speed and time
+Distance Remaining based on speed and time
+
+the play screen needs to stop the clock by itself aftr the time/distance is covered
+and for now its all metric...miles is another feature
+
+Feature:
+change units to miles in running mode
+
+
+
+Bugfix:
+make tempaltes/settings screens look pretty...they look shit!
