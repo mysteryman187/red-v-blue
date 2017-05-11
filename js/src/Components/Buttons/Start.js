@@ -3,7 +3,7 @@ import { Button, Glyphicon } from 'react-bootstrap';
 
 class StartButton extends Component {
 	render() {
-		return <Button onClick={this.props.onClick}>Start</Button>
+		return <Button bsStyle="primary" onClick={this.props.onClick}>Start</Button>
 	}
 }
 

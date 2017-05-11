@@ -95,6 +95,22 @@ basically a textarea on history view
 ... this is the last feature to make this app usable to me everyday instad of timer+memo
 
 
+ok back after 6 months away...hiii!
+Now i do corssfitish workouts all the time and I want to the app to do some more stuff!
+I can maybe just enhance the templates a little with:
+
+Laps - this would auto-finish once I hit Lap this many times...but I can always hit finish before if I give up
+Lap Time - this would auto-lap after the lap time went
+lap buzzer - this would make a noise when it auto-Laps
+start buzzer - this would make a noise when a lap starts
+break-time - this would be a timer which starts after either - the user laps or auot-laps - the GUI would indicate its break time
+named laps - this would display the lap name as text while the lap is going(allows me to put an exercise name in there so i can know what to do)
+	-	this could wedge into running mode which would just need to display how fast to run as the name
+	- also the clock probably is counting down for running mode
+maximum time - this would auto-finish after this much time elapsed and makes a noise
+lap warning - select a time and it makes a noise that many seconds before the end of the lap
+
+
 Feature:
 Running mode
 

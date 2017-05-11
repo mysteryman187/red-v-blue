@@ -9,7 +9,8 @@ import { START_TIMER,
         CANCEL_TIMER,
         SETUP_TICK,
         PREPARE_START,
-        PREPARE_END } from './actions/timerActions';
+        PREPARE_END,
+        UPDATE_HISTORIC_DESCRIPTION } from './actions/timerActions';
 import { DESCRIPTION_CHANGE,
         SETUP_TIME_CHANGE } from './actions/PreWorkoutActions';
 import { DESCRIPTION_CHANGE_CREATE,
@@ -125,6 +126,14 @@ function history(state = localStorageHistory, players, workout, action){
             }
         case DELETE_RACE:
             return state.filter(history => history.timestamp !== action.timestamp);
+        case UPDATE_HISTORIC_DESCRIPTION:
+            return state.map(history => {
+                const newState = { ...history };
+                if (action.timestamp === history.timestamp) {
+                    newState.workout.description = action.description;
+                }
+                return newState;
+            });
         default:
             return state;
     }

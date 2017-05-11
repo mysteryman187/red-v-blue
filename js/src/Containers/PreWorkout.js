@@ -19,13 +19,16 @@ class PreWorkout extends Component {
     render() {
     	const backTo = encodeURIComponent(`setup/${this.props.params.players}`);
         return <div>
-        			<Link to={'/'} className="nav-link">Back</Link>
-        			<Link to={`templates/${backTo}`}>
-        				<Button>
-        					Pick Template 
-        					<Glyphicon glyph="send"/>
-        				</Button>
-        			</Link>
+        			<div className="flex-nav">
+                        <Link to={'/'} className="nav-link">Back</Link>
+        			    <div/>
+                        <Link to={`templates/${backTo}`}>
+        				    <Button bsStyle="primary" bsSize="xsmall">
+        					   Pick Template 
+        					   <Glyphicon glyph="send"/>
+        				    </Button>
+        			    </Link>
+                    </div>    
 					<Link to={`play/${this.props.params.players}`} className="nav-link"><StartButton/></Link>
         			<Template setupTime={this.props.setupTime}
         					  setupTimeChange={this.props.setupTimeChange}

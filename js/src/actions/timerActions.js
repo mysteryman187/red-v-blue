@@ -12,6 +12,7 @@ export const CANCEL_TIMER = 'CANCEL_TIMER';
 export const PREPARE_START = 'PREPARE_START';
 export const PREPARE_END = 'PREPARE_END';
 export const SETUP_TICK = 'SETUP_TICK';
+export const UPDATE_HISTORIC_DESCRIPTION = 'UPDATE_HISTORIC_DESCRIPTION';
 
 const _timerStarted = intervalId => ({ type: TIMER_STARTED, intervalId });
 const _timerTick = elapsedTime => ({ type: TIMER_TICK, elapsedTime });
@@ -89,3 +90,5 @@ export function cancelTimer() {
 			
 	};
 }
+
+export const updateHistoricDescription = (description, timestamp) => dispatch => dispatch({ type: UPDATE_HISTORIC_DESCRIPTION, description, timestamp });

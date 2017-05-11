@@ -1,10 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { FormGroup , ControlLabel, FormControl } from 'react-bootstrap'
 import Player from '../Components/Player';
 import TrashButton from '../Components/Buttons/Trash';
 import _ from 'lodash';
 import { Link } from 'react-router';
-import { deleteRace } from '../actions/timerActions';
+import { deleteRace, updateHistoricDescription } from '../actions/timerActions';
 
 class Historic extends Component {
     render() {
@@ -19,14 +20,17 @@ class Historic extends Component {
         			<div className={`players players-${players}`}>
                    		{ this.props.players.map(renderPlayer) }
                		</div>
-                    <div>{ this.props.workout.description.split('\n').map((line, i) => <div key={i}>{line}</div> ) }</div>
+                    <FormGroup controlId="description">
+                        <ControlLabel>Description</ControlLabel> 
+                        <FormControl componentClass="textarea" placeholder="description" defaultValue={this.props.workout.description} onChange={ this.props.updateDescription } /> 
+                    </FormGroup>
                 </div>;
     }
 }
 
-
 Historic.propTypes = {
 	deleteRace: PropTypes.func.isRequired,
+    updateDescription: PropTypes.func.isRequired,
     players: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     workout: PropTypes.shape({
         description: PropTypes.string
@@ -35,6 +39,10 @@ Historic.propTypes = {
 
 function mapPropsToDispatch(dispatch, ownProps) {
 	return {
+        updateDescription: (event) => {
+            const newValue = event.target.value;
+            dispatch(updateHistoricDescription(newValue, Number(ownProps.params.timestamp) ));
+        },
 		deleteRace: () => {
 			ownProps.router.goBack();
 			dispatch(deleteRace(Number(ownProps.params.timestamp)));
